@@ -1,0 +1,28 @@
+{
+  "name": "us-date",
+  "main": "index.js",
+  "version": "0.0.0",
+  "description": "Format dates as US M/D/Y strings",
+  "license": "MIT",
+  "repository": "bendrucker/us-date",
+  "author": {
+    "name": "Ben Drucker",
+    "email": "bvdrucker@gmail.com",
+    "url": "bendrucker.me"
+  },
+  "scripts": {
+    "test": "standard && tape test.js"
+  },
+  "keywords": [
+    "date",
+    "format",
+    "us"
+  ],
+  "devDependencies": {
+    "tape": "^4.0.0",
+    "standard": "^4.0.0"
+  },
+  "files": [
+    "index.js"
+  ]
+}
