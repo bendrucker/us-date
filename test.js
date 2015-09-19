@@ -3,13 +3,11 @@
 var test = require('tape')
 var usDate = require('./')
 
+var date = new Date('2/2/2002')
+
 test(function (t) {
-  var offset = new Date().getTimezoneOffset()
-  if (offset > 0) {
-    t.equal(usDate(new Date(0)), '12/31/1969')
-  } else {
-    t.equal(usDate(new Date(0)), '1/1/1970')
-  }
+  t.equal(usDate(date), '2/2/2002')
+  t.equal(usDate(date, {pad: true}), '02/02/2002')
 
   t.end()
 })

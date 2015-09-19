@@ -1,12 +1,32 @@
 'use strict'
 
-var assert = require('assert')
+var extend = require('xtend')
+var assert = require('assert-ok')
+var fill = require('zero-fill')(2)
 
-module.exports = function usDate (now, separator) {
+var defaults = {
+  separator: '/',
+  pad: false
+}
+
+module.exports = function usDate (now, options) {
   now = now || new Date()
-  separator = separator || '/'
+  assert(now instanceof Date, 'date is required')
 
-  assert(now instanceof Date)
+  if (typeof options === 'string') {
+    options = {separator: options}
+  }
+  options = extend(defaults, options || {})
 
-  return [now.getMonth() + 1, now.getDate(), now.getFullYear()].join(separator)
+  return [
+    now.getMonth() + 1,
+    now.getDate(),
+    now.getFullYear()
+  ]
+  .map(format)
+  .join(options.separator)
+
+  function format (value) {
+    return (options.pad ? fill : String)(value)
+  }
 }
