@@ -1,7 +1,7 @@
 {
   "name": "us-date",
   "main": "index.js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "Format dates as US M/D/Y strings",
   "license": "MIT",
   "repository": "bendrucker/us-date",
