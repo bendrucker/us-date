@@ -19,9 +19,9 @@ module.exports = function usDate (now, options) {
   options = extend(defaults, options || {})
 
   return [
-    now.getMonth() + 1,
-    now.getDate(),
-    now.getFullYear()
+    getValue('Month') + 1,
+    getValue('Date'),
+    getValue('FullYear')
   ]
   .map(format)
   .join(options.separator)
@@ -29,4 +29,9 @@ module.exports = function usDate (now, options) {
   function format (value) {
     return (options.pad ? fill : String)(value)
   }
+
+  function getValue (property) {
+    return now['get' + (options.utc ? 'UTC' : '') + property]()
+  }
 }
+

@@ -33,7 +33,7 @@ The date to use for formatting.
 ##### options
 
 Type: `object` / `string`  
-Default: `{separator: '/', pad: false}`
+Default: `{separator: '/', pad: false, utc: false}`
 
 Set `pad` to always use two digit month/day values (`01/01/2000`). If `options` is a string, it will be treated as the separtor.
 
