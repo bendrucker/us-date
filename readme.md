@@ -1,4 +1,4 @@
-# us-date [![Build Status](https://travis-ci.org/bendrucker/us-date.svg?branch=master)](https://travis-ci.org/bendrucker/us-date)
+# us-date [![Build Status](https://travis-ci.org/bendrucker/us-date.svg?branch=master)](https://travis-ci.org/bendrucker/us-date) [![Greenkeeper badge](https://badges.greenkeeper.io/bendrucker/us-date.svg)](https://greenkeeper.io/)
 
 > Format dates as US M/D/Y strings
 
